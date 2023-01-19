@@ -5,7 +5,7 @@ import argparse
 import os
 from config import Nih14 as config
 from datasets import ChestX_ray14,build_transform
-from networks import resnet50, ConvMixer
+from networks import resnet50
 import torchvision.models
 import time
 from utils import AverageMeter,save_model, computeAUROC
@@ -25,7 +25,7 @@ parser.add_argument('--test', dest='test', default=False)
 
 args = parser.parse_args()
 
-assert args.backbone in ['resnet50', 'convmixer12','convmixer36','resnet50_imgnet']
+assert args.backbone in ['resnet50','resnet50_imgnet']
 
 def build_model(conf):
 
@@ -38,12 +38,6 @@ def build_model(conf):
         # init the fc layer
         model.fc[0].weight.data.normal_(mean=0.0, std=0.01)
         model.fc[0].bias.data.zero_()
-
-    elif conf.backbone =="convmixer12":
-        model = ConvMixer(768, 12, patch_size=16, n_classes=14)
-    elif conf.backbone =="convmixer36":
-        model = ConvMixer(768, 36, patch_size=16, n_classes=14)
-
 
     if args.weight is not None:
         checkpoint = torch.load(args.weight, map_location='cpu')
