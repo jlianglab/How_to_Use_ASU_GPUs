@@ -1,0 +1,10 @@
+python rsna_pneumonia.py --gpu 0,1,2,3 --run 1 --batch_size 400 --backbone resnet50_nih14
+python rsna_pneumonia.py --gpu 0,1,2,3 --run 2 --batch_size 400 --backbone resnet50_nih14
+python rsna_pneumonia.py --gpu 0,1,2,3 --run 3 --batch_size 400 --backbone resnet50_nih14
+python rsna_pneumonia.py --gpu 0,1,2,3 --run 4 --batch_size 400 --backbone resnet50_nih14
+python rsna_pneumonia.py --gpu 0,1,2,3 --run 5 --batch_size 400 --backbone resnet50_nih14
+python rsna_pneumonia.py --gpu 0,1,2,3 --run 6 --batch_size 400 --backbone resnet50_nih14
+python rsna_pneumonia.py --gpu 0,1,2,3 --run 7 --batch_size 400 --backbone resnet50_nih14
+python rsna_pneumonia.py --gpu 0,1,2,3 --run 8 --batch_size 400 --backbone resnet50_nih14
+python rsna_pneumonia.py --gpu 0,1,2,3 --run 9 --batch_size 400 --backbone resnet50_nih14
+python rsna_pneumonia.py --gpu 0,1,2,3 --run 10 --batch_size 400 --backbone resnet50_nih14
