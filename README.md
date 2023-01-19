@@ -1,1 +1,1 @@
-# How_to_Use_ASU_GPUs
+# How to Use ASU GPUs
