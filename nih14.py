@@ -267,18 +267,18 @@ if __name__ == '__main__':
 
     conf = config(args)
 
-    print("[INFO] Test", args.test, ", Weight", args.weight)
-    if args.test == "True" and args.weight != None:
-        test_dataset = ChestX_ray14(conf.data_root, conf.test_list, build_transform(mode="test"))
-        sampler_test = torch.utils.data.SequentialSampler(test_dataset)
-        test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=conf.batch_size, num_workers=conf.num_workers, pin_memory=True, sampler=sampler_test)
+#     print("[INFO] Test", args.test, ", Weight", args.weight)
+#     if args.test == "True" and args.weight != None:
+#         test_dataset = ChestX_ray14(conf.data_root, conf.test_list, build_transform(mode="test"))
+#         sampler_test = torch.utils.data.SequentialSampler(test_dataset)
+#         test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=conf.batch_size, num_workers=conf.num_workers, pin_memory=True, sampler=sampler_test)
         
-        model, optimizer, lr_scheduler = build_model(conf)
-        test(test_loader, conf, args.weight, model)
-        exit(0)
-    else:
-        print("Test mode, but no weight path given, exit!",file = conf.log_writter)
-        exit(0)
+#         model, optimizer, lr_scheduler = build_model(conf)
+#         test(test_loader, conf, args.weight, model)
+#         exit(0)
+#     else:
+#         print("Test mode, but no weight path given, exit!",file = conf.log_writter)
+#         exit(0)
 
 
 
